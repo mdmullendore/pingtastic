@@ -1,0 +1,25 @@
+{
+  "name": "pingastic",
+  "version": "1.0.1",
+  "description": "pings your heroku app to keep the app awake",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "heroku",
+    "pingastic",
+    "bot",
+    "ping"
+  ],
+  "author": "Mason Mullendore <webmullendore@gmail.com> (http://masonmullendore.com)",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
+  }
+}
