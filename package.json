@@ -1,6 +1,6 @@
 {
   "name": "pingastic",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "pings your heroku app to keep the app awake",
   "main": "app.js",
   "scripts": {

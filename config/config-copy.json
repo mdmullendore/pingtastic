@@ -1,4 +1,4 @@
 {
-  "botUrl": "bot-url.com",
-  "siteUrl": "site-url.com"
+  urls: ['example1.com','example2.com','example3.com'],
+  botUrl: 'bot-url.com'
 }

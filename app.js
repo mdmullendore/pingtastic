@@ -5,30 +5,32 @@ let http = require('http');
 let config = require('./config/config');
 let app = express();
 
-const url = config.siteUrl;
+const urls = config.urls;
 const botUrl = config.botUrl;
 const interval = 5 * 60 * 1000;
 const BotInterval = 20 * 60 * 1000;
 
-function pingBot () {
+function pingBot() {
   http.get(botUrl);
   console.log('Bots never sleep ... ... ... ');
 }
 
-function pingUrl () {
-  http.get(url);
-  console.log('ping ' + url + ' at ' + new Date() + ' ... ... ... ');
+function pingUrls() {
+  urls.forEach(function(url) {
+    http.get(url);
+    console.log(`ping ${url} at ${new Date()} ... ... ... `);
+  });
 }
 
-setInterval(function () {
+setInterval(function() {
   pingBot();
 }, BotInterval);
 
-setInterval(function () {
-  pingUrl();
+setInterval(function() {
+  pingUrls();
 }, interval);
 
 pingBot();
-pingUrl();
+pingUrls();
 
 module.exports = app;
